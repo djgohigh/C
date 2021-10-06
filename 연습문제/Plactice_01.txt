@@ -1,0 +1,205 @@
+if문 베이스
+#pragma warning(disable : 4996)
+
+#include <stdio.h>
+
+int main(void)
+{
+	int opt;
+	double num1, num2;
+	double result;
+
+	printf("1. 덧셈 2. 뺄셈 3. 곱셈 4. 나눗셈 \n");
+	printf("선택? ");
+	scanf("%d", &opt);
+	printf("두 개의 실수 입력: ");
+	scanf("%lf %lf", &num1, &num2);
+
+	if (opt == 1)
+		result = num1 + num2;
+	if (opt == 2)
+		result = num1 - num2;
+	if (opt == 3)
+		result = num1 * num2;
+	if (opt == 4)
+		result = num1 / num2;
+
+	printf("결과: %f \n", result);
+	return 0;
+}
+
+scanf 를 활용한 3 or 4의 배수
+#pragma warning(disable : 4996)
+
+#include <stdio.h>
+
+int main(void)
+{
+	int num;
+
+	scanf("%d", &num);
+
+	if (num % 3 == 0 || num % 4 == 0)
+	printf("3 또는 4의 배수: %d \n", num);
+	
+	return 0;
+}
+
+1~4 이외 숫자 입력 시 예외처리
+#pragma warning(disable : 4996)
+
+#include <stdio.h>
+
+int main(void)
+{
+	int opt;
+	double num1, num2;
+	double result;
+
+	printf("1. 덧셈 2. 뺄셈 3. 곱셈 4. 나눗셈 \n");
+	printf("선택?");
+	scanf("%d", &opt);
+
+	if (0>opt && opt<4)
+	{
+		printf("두 개의 실수 입력: ");
+		scanf("%lf %lf", &num1, &num2);
+
+		if (opt == 1)
+			result = num1 + num2;
+		else if (opt == 2)
+			result = num1 - num2;
+		else if (opt == 3)
+			result = num1 * num2;
+		else
+			result = num1 / num2;
+
+		printf("결과: %f \n", result);
+	}
+	else
+		printf("입력이 잘못되었습니다.");
+	return 0;
+}
+
+189쪽 3번
+#pragma warning(disable : 4996)
+
+#include <stdio.h>
+
+int main(void)
+{
+	int a, b, c;
+	int avg = 0;
+
+	printf(" 국어, 영어, 수학 점수를 입력하세요.");
+	scanf("%d %d %d", &a, &b, &c);
+
+	avg = (a + b + c) / 3;
+
+	if (avg >= 90)
+		printf("A");
+	else if (90 > avg && avg >= 80)
+		printf("B");
+	else if (80 > avg && avg >= 70)
+		printf("C");
+	else if (70 > avg && avg >= 50)
+		printf("D");
+	else
+		printf("F");
+	return 0;
+}
+
+189쪽 2번
+
+int main(void)
+{
+	int a, b, result;
+
+	printf("두 수를 입력하세요.");
+	scanf("%d %d", &a, &b);
+
+	if (a <= b)
+	{
+		result = b - a;
+		printf("%d", result);
+	}
+	else
+		result = a - b;
+		printf("%d", result);
+
+	return 0;
+}
+
+로그인 시스템 만들기
+
+#pragma warning(disable : 4996)
+
+#include <stdio.h>
+
+int main(void)
+{
+	int 아이디 = 114;
+	int 비밀번호 = 200;
+
+	while (1)
+	{
+		printf("아이디를 입력하세요. \n");
+		scanf("%d", &아이디);
+		printf("비밀번호를 입력하세요. \n");
+		scanf("%d", &비밀번호);
+
+		if (아이디 == 114 && 비밀번호 == 200)
+		{
+			printf("로그인에 성공하셨습니다. \n");
+			printf("\n");
+			break;
+		}
+		else if (아이디 != 114 && 비밀번호 == 200)
+		{
+			printf("아이디가 틀렸습니다. \n");
+			printf("\n");
+			continue;
+		}
+		else if (아이디 == 114 && 비밀번호 != 200)
+		{
+			printf("비밀번호가 틀렸습니다. \n");
+			printf("\n");
+			continue;
+		}
+		else if (아이디 != 114 && 비밀번호 != 200)
+		{
+			printf("아이디 및 비밀번호를 틀렸습니다. \n");
+			printf("\n");
+			continue;
+		}
+	}
+	return 0;
+}
+
+193페이지 문제1
+
+#pragma warning(disable : 4996)
+
+#include <stdio.h>
+
+int main(void)
+{
+	int a, b;
+
+	for (a = 2; a < 10; a++)
+	{
+		if (a % 2 != 0)
+			continue;
+		b = 1;
+		for (b = 1; b < 10; b++)
+		{
+			if (b == a+1)
+				break;
+			printf("%d * %d = %d \n", a, b, a * b);
+		}
+	}
+	return 0;
+}
+
+193페이지 문제2
+

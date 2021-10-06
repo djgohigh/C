@@ -1,0 +1,141 @@
+로그인 알고리즘 만들기
+
+#pragma warning(disable : 4996)
+
+#include <stdio.h>
+{
+	int ID = 500;
+	int PW = 1234;
+	int id, pw;
+
+	do {
+		print(" 사번입력 : ");
+		scanf("%d", &id);
+		printf("\n");
+		ptirntf(" 비번입력 : ");
+		scanf("%d", &pw);
+		print("\n");
+	
+	} while (ID != id || PW != pw);
+	printf("로그인 되었습니다");
+	return 0;
+}
+
+161페이지 1번
+#pragma warning(disable : 4996)
+
+#include <stdio.h>
+int main(void)
+{
+	int total = 0, num = 1;
+
+	printf("정수의 값을 입력하세요.1");
+	total += num;
+	scanf("%d", &num);
+
+	while (num!=0)
+	{
+		printf("정수의 값을 입력하세요.");
+		total += num;
+		scanf("%d", &num);
+	}
+	printf("정수의 합: %d", total);
+	return 0;
+}
+
+161페이지 2번
+
+#pragma warning(disable : 4996)
+
+#include <stdio.h>
+int main(void)
+{
+	int total = 0, num1 = 1;
+
+	do
+	{
+		total = total + num1 * 2;
+		num1++;
+	} while (num1 <= 50);
+
+	printf("total: %d \n", total);
+	return 0;
+}
+
+161페이지 3번
+#pragma warning(disable : 4996)
+
+#include <stdio.h>
+int main(void)
+{
+	int dan = 2, num = 0;
+
+	do
+	{
+		num = 1;
+		do
+		{
+			printf("%d * %d = %d \n", dan, num, dan * num);
+			num++;
+		} while (num < 10);
+		dan++;
+	} while (dan < 10);
+	return 0;
+} 
+
+167페이지 1번
+
+#pragma warning(disable : 4996)
+
+#include <stdio.h>
+
+int main(void)
+{
+	int num1, num2;
+	int total;
+	printf("두 개의 정수를 입력하시오. \n");
+	scanf("%d %d", &num1, &num2);
+
+	for (total=0; num1 <= num2; num1++ )
+	{
+		total += num1;
+	}
+	printf("범위 내 정수합계: %d \n", total);
+	return 0;
+}
+
+int main(void)
+{
+	int dan = 2;
+	int num = 1;
+	
+	while(dan < 10)
+	{
+		while(num<10)
+		{
+			printf("%d * %d = %d \n", dan, num, dan*num);
+			num++;
+		}
+		dan++
+		printf("\n");
+		return 0;
+	}
+	
+for 구구단
+
+#pragma warning(disable : 4996)
+
+#include <stdio.h>
+
+int main(void)
+{
+	int dan, num;
+
+	for (dan = 2; dan < 10; dan++)
+	{
+		for (num = 1; num < 10; num++)
+			printf("%d * %d = %d \n", dan, num, dan * num);
+			printf("\n");
+	}
+	return 0;
+}

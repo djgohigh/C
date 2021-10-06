@@ -1,0 +1,92 @@
+0830 연습문제 1번
+package new2;
+
+public class new0829ox01 {
+
+	public static void main(String[] args) {
+		int num = -10;
+		
+		System.out.println(Math.abs(num));
+	}
+
+}
+
+0830 연습문제 2번
+package new2;
+
+import java.util.Scanner;
+
+public class new0830ox02 {
+
+	public static void main(String[] args) {
+		double i, j;
+		int k;
+		double num = 1;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		i = sc.nextDouble();
+		j = sc.nextDouble();
+		
+		for(k=0; k<j; k++) {
+			num *= i;
+		}
+		System.out.printf("%f \n", num);
+	}
+}
+
+0830 연습문제 3번
+package new2;
+
+import java.util.Scanner;
+
+public class new0830ox03 {
+
+	public static void main(String[] args) {
+		int i,j, k;
+		int num = 1;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		i = sc.nextInt();
+		j = sc.nextInt();
+		
+		for(k=1; k<i; k++) {
+			if(i%k==0 && j%k==0) {
+				num = k;
+			}
+		}
+		System.out.printf("%d", num);
+	}
+}
+
+0830 연습문제 4번
+package new2;
+
+import java.util.Scanner;
+
+public class new0830ox04 {
+
+	public static void main(String[] args) {
+		int i,j, k;
+		int num = 1;
+		int lcd;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		i = sc.nextInt();
+		j = sc.nextInt();
+		
+		for(k=1; k<i; k++) {
+			if(i%k==0 && j%k==0) {
+				num = k;
+			}
+		}
+		lcd = (i*j)/num;
+		System.out.printf("%d", lcd);
+	}
+}
+
+0830 연습문제 5번
+
+ 
